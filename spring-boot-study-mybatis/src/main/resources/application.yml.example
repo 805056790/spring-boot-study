@@ -9,3 +9,8 @@ spring:
     username: your_mysql_username
     password: your_mysql_password
 
+# http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
+mybatis:
+    type-aliases-package: pers.study.mybatis.model
+    mapper-locations: classpath:mapper/*Mapper.xml
+

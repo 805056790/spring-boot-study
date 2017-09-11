@@ -8,3 +8,7 @@
 ## spring-boot-study-jpa
 
 > spring-boot with jpa.
+
+## spring-boot-study-jdbc
+
+> spring-boot with jdbc(mysql).

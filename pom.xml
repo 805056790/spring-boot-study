@@ -9,6 +9,7 @@
         <module>spring-boot-starter</module>
         <module>spring-boot-study-jpa</module>
         <module>spring-boot-study-jdbc</module>
+        <module>spring-boot-study-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 

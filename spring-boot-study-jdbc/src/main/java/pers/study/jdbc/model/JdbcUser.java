@@ -23,7 +23,7 @@ import java.io.Serializable;
 @Table(name = "spring_boot_jdbc_users")
 public class JdbcUser implements Serializable{
 
-    private static final long serialVersionUID = -7051052998122815616L;
+    private static final long serialVersionUID = 5742753003637998518L;
 
     @Id
     @GeneratedValue

@@ -1,0 +1,9 @@
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;MODE=MySQL
+
+mybatis:
+    type-aliases-package: pers.study.mybatis.model
+    mapper-locations: classpath:mapper/*Mapper.xml
