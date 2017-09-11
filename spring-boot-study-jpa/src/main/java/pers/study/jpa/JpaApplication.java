@@ -1,4 +1,4 @@
-package per.study.jpa;
+package pers.study.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

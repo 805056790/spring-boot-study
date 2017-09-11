@@ -1,4 +1,4 @@
-package per.study.jpa;
+package pers.study.jpa;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

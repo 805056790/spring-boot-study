@@ -1,6 +1,6 @@
-package per.study.jpa.service;
+package pers.study.jpa.service;
 
-import per.study.jpa.model.JpaUser;
+import pers.study.jpa.model.JpaUser;
 
 import java.util.List;
 

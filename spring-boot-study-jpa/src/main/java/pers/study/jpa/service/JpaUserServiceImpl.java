@@ -1,11 +1,11 @@
-package per.study.jpa.service;
+package pers.study.jpa.service;
 
 import com.google.common.base.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-import per.study.jpa.model.JpaUser;
+import pers.study.jpa.model.JpaUser;
 
 import java.util.List;
 

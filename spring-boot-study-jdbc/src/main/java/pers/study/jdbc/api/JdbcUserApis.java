@@ -1,4 +1,4 @@
-package per.study.jpa.api;
+package pers.study.jdbc.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import per.study.jpa.model.JpaUser;
-import per.study.jpa.service.JpaUserService;
+import pers.study.jdbc.model.JdbcUser;
+import pers.study.jdbc.service.JdbcUserService;
 
 import java.util.List;
 
@@ -16,34 +16,36 @@ import java.util.List;
  * @author : panxin
  */
 @RestController
-public class JpaUserApis {
+public class JdbcUserApis {
 
-    private final JpaUserService userService;
+    private final JdbcUserService userService;
 
     @Autowired
-    public JpaUserApis(JpaUserService userService) {
+    public JdbcUserApis(JdbcUserService userService) {
         this.userService = userService;
     }
 
     @GetMapping("/api/user")
-    public List<JpaUser> findAll() {
+    public List<JdbcUser> findAll() {
         return userService.findAll();
     }
 
     @GetMapping("/api/user/{id}")
-    public JpaUser findById(@PathVariable Long id) {
+    public JdbcUser findById(@PathVariable Long id) {
         return userService.findById(id);
     }
 
     @PostMapping("/api/user")
-    public JpaUser create(@RequestParam String name) {
-        return userService.create(JpaUser.builder().name(name).build());
+    public JdbcUser create(@RequestParam String name,
+                           @RequestParam String password) {
+        return userService.create(JdbcUser.builder().name(name).password(password).build());
     }
 
     @PutMapping("/api/user/{id}")
     public Boolean update(@PathVariable Long id,
-                          @RequestParam String name) {
-        return userService.update(id, name);
+                          @RequestParam String name,
+                          @RequestParam String password) {
+        return userService.update(id, name, password);
     }
 
 }

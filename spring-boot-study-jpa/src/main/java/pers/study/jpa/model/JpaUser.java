@@ -1,4 +1,4 @@
-package per.study.jpa.model;
+package pers.study.jpa.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

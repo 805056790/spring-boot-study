@@ -1,4 +1,4 @@
-package per.study.jpa;
+package pers.study.jpa;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import per.study.jpa.model.JpaUser;
+import pers.study.jpa.model.JpaUser;
 
 import java.net.URI;
 import java.util.List;

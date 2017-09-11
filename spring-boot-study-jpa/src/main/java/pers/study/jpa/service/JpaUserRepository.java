@@ -1,9 +1,9 @@
-package per.study.jpa.service;
+package pers.study.jpa.service;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
-import per.study.jpa.model.JpaUser;
+import pers.study.jpa.model.JpaUser;
 
 import javax.transaction.Transactional;
 import java.util.List;
