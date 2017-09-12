@@ -10,6 +10,7 @@
         <module>spring-boot-study-jpa</module>
         <module>spring-boot-study-jdbc</module>
         <module>spring-boot-study-mybatis</module>
+        <module>spring-boot-study-redis</module>
     </modules>
     <packaging>pom</packaging>
 
