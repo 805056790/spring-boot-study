@@ -20,3 +20,7 @@
 ## spring-boot-study-redis
 
 > spring-boot with redis.
+
+## spring-boot-study-elasticsearch
+
+> spring-boot with elasticsearch.

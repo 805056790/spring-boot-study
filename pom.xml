@@ -11,6 +11,7 @@
         <module>spring-boot-study-jdbc</module>
         <module>spring-boot-study-mybatis</module>
         <module>spring-boot-study-redis</module>
+        <module>spring-boot-study-elasticsearch</module>
     </modules>
     <packaging>pom</packaging>
 
