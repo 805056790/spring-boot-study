@@ -13,6 +13,7 @@
         <module>spring-boot-study-redis</module>
         <module>spring-boot-study-elasticsearch</module>
         <module>spring-boot-study-devtools</module>
+        <module>spring-boot-study-aop</module>
     </modules>
     <packaging>pom</packaging>
 
