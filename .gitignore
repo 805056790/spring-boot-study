@@ -22,3 +22,5 @@ target/
 s*/*/target/
 
 application.yml
+
+data/
