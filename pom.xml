@@ -14,6 +14,7 @@
         <module>spring-boot-study-elasticsearch</module>
         <module>spring-boot-study-devtools</module>
         <module>spring-boot-study-aop</module>
+        <module>spring-boot-study-docker</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -23,7 +24,11 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+
+        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+
+        <docker.image.prefix>springboot</docker.image.prefix>
+
         <guava.version>22.0</guava.version>
         <lombok.version>1.16.18</lombok.version>
     </properties>
@@ -31,7 +36,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>2.0.2.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -67,6 +72,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jetty</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
@@ -114,6 +124,24 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Docker maven plugin -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <imageName>${docker.image.prefix}/${project.build.finalName}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
             </plugin>
         </plugins>
     </build>
