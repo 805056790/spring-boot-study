@@ -28,6 +28,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>pers.study.docker.DockerApplication</mainClass>
+                    <executable>false</executable>
+                    <excludeDevtools>true</excludeDevtools>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
