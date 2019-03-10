@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Winter {
 
-    @Pointcut("execution(** pers.study.aop.service.SeasonService.winter(..))")
+    @Pointcut("execution(* pers.study.aop.service.SeasonService.winter(..))")
     public void winter(){}
 
     @Before("winter()")
